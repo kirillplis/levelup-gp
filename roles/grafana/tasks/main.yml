@@ -1,0 +1,13 @@
+---
+- name: Grafana install
+  become: yes
+  docker_container:
+    name: grafana
+    image: grafana/grafana
+    state: started
+    published_ports: 3000:3000
+    container_default_behavior: no_defaults
+    env:
+      GF_INSTALL_PLUGINS: "grafana-clock-panel,grafana-simple-json-datasource,alexanderzobnin-zabbix-app"
+  vars:
+    ansible_python_interpreter: /bin/python3

@@ -1,0 +1,39 @@
+---
+- name: Services Deployment
+  hosts: all
+  gather_facts: no
+  pre_tasks:
+    # - name: Update servers
+    #   become: yes
+    #   apt:
+    #     update_cache: yes
+    #     upgrade: yes
+    #     force: yes
+    
+    - name: Install apps
+      become: yes
+      apt:
+        name:
+          - docker.io
+          - python3-pip
+        state: latest
+      
+    - name: Start service
+      become: yes
+      service: 
+        name: docker
+        state: started
+
+    # - name: Install docker SDK
+    #   pip:
+    #     name: 
+    #       - docker
+    #       - docker-compose
+    #     state: present
+    
+             
+  roles:
+   - grafana
+   - jenkins
+   - zabbix
+   - elk
