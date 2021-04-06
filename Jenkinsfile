@@ -19,9 +19,8 @@ pipeline {
                 sh 'svn --version'
             }
         }
-    }
-}
-      }
-    }
+   }
   }
+}
+}
 }
