@@ -1,6 +1,5 @@
 ---
 - name: Zabbix install
-  become: yes
   docker_container:
     name: zabbix
     image: zabbix/zabbix-appliance:latest

@@ -1,6 +1,5 @@
 ---
 - name: Jenkins install
-  become: yes
   docker_container:
     name: jenkins
     image: jenkins/jenkins:lts

@@ -1,6 +1,10 @@
 ---
+- name: Clone repo
+  git:
+    repo: https://github.com/deviantony/docker-elk.git
+    dest: "/tmp/docker-elk"
+
 - name: Run ELK
-  become: yes
   docker_compose:
-    project_src: "{{ playbook_dir }}/shit"
+    project_src: /tmp/docker-elk/
     state: present
