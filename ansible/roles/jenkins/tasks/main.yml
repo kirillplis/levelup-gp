@@ -1,11 +1,19 @@
 ---
-- name: Jenkins install
-  docker_container:
-    name: jenkins
-    image: jenkins/jenkins:lts
-    state: started
-    published_ports: 8080:8080
-    container_default_behavior: no_defaults
-    volumes:
-      - jenkins-docker-cert:/cert/client
-      - jenkins-data:/var/jenkins_home
+- name: Add repo
+  shell: |
+    wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+    sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > \
+    /etc/apt/sources.list.d/jenkins.list'
+
+- name: Update
+  become: yes
+  apt:
+    update_cache: yes
+
+- name: Install Jenkins
+  become: yes
+  apt:
+    name:
+      - openjdk-11-jdk
+      - jenkins
+    state: latest
