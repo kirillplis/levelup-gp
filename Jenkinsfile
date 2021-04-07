@@ -17,18 +17,9 @@ pipeline {
                 }
             }
         }
-        stage('Deploy Image') {
-            steps{
-                script {
-                    docker.withRegistry( '', registryCredential ) {
-                    dockerImage.push()
-                    }
-                }
-            }
-        }
         stage('Deploy application') {
             steps{
-                sh "kubectl apply -f kuber_vkr.yml"
+                sh "kubectl apply -f vkr-cluster.yml"
             }
         }
     }
