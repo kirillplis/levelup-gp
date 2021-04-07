@@ -1,24 +1,35 @@
 pipeline {
-  environment {
-    registry = "chelbsik/hw-14"
-    registryCredential = 'dockerhub'
-    dockerImage = ''
-  }
-  agent any
-  stages {
-    stage('Cloning Git') {
-      steps {
-        git 'https://github.com/gustavoapolinario/microservices-node-example-todo-frontend.git'
-      }
+    environment {
+        registry = "chelbsik/vkr"
+        registryCredential = 'dockerhub'
     }
-   agent { dockerfile true }
-   stages {
-        stage('Test') {
+    agent any
+    stages {
+        stage('Cloning Git') {
             steps {
-                sh 'node --version'
-                sh 'svn --version'
+                git 'https://github.com/Chelbsik/vkr.git'
             }
         }
-   }
-  }
+        stage('Building image') {
+            steps{
+                script {
+                    docker.build registry + ":$BUILD_NUMBER"
+                }
+            }
+        }
+        stage('Deploy Image') {
+            steps{
+                script {
+                    docker.withRegistry( '', registryCredential ) {
+                    dockerImage.push()
+                    }
+                }
+            }
+        }
+        stage('Deploy application') {
+            steps{
+                sh "kubectl apply -f kuber_vkr.yml"
+            }
+        }
+    }
 }
