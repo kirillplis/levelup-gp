@@ -1,7 +1,6 @@
 pipeline {
     environment {
         registry = "chelbsik/vkr"
-        registryCredential = 'dockerhub'
     }
     agent any
     stages {
