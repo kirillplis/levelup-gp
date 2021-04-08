@@ -39,3 +39,6 @@ No instructions here, enjoy your nostalgia!
 [Zabbix](http://35.187.50.242:80)
 [Kibana (ELK)](http://35.187.50.242:5601)
 ```
+
+http://github.com - automatic!
+[GitHub](http://github.com)
