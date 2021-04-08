@@ -24,4 +24,5 @@ Installation process:
     - gcloud config set compute/zone europe-north1-a
     - gcloud container clusters get-credentials vkr
 
-4) Create Jenkins pipeline, set 
+4) Create Jenkins pipeline, set GitHub repository, GitHub hook trigger for GITScm polling, and webhook at GitHub repository.
+5) 
