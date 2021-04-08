@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Cloning Git') {
             steps {
-                git 'https://github.com/Chelbsik/vkr.git'
+                git 'https://github.com/Chelbsik/levelup-vkr.git'
             }
         }
         stage('Building image') {
