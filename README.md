@@ -34,7 +34,7 @@ No instructions here, enjoy your nostalgia!
 ## Links:
 1)[Paint](http://35.228.58.197:8080)
 2)[Jenkins](http://35.187.50.242:8080)
-3)[Grafana](http://35.187.50.242:3000)
-4)[Zabbix](http://35.187.50.242:80)
-5)[Kibana (ELK)](http://35.187.50.242:5601)
+4)[Grafana](http://35.187.50.242:3000)
+5)[Zabbix](http://35.187.50.242:80)
+6)[Kibana (ELK)](http://35.187.50.242:5601)
 
