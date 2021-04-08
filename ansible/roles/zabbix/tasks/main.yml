@@ -5,6 +5,6 @@
     image: zabbix/zabbix-appliance:latest
     state: started
     published_ports:
-      - 80:80
       - 10051:10051
+      - 80:80
     container_default_behavior: no_defaults
