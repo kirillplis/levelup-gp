@@ -10,6 +10,13 @@ pipeline {
                 git 'https://github.com/Chelbsik/levelup-vkr.git'
             }
         }
+        stage('Building image') {
+            steps{
+                script {
+                    dockerImage = docker.build registry + ":$BUILD_NUMBER"
+            }   
+        }
+    }
         stage('Deploy application') {
             steps{
                 sh "kubectl delete deploy vkr"
