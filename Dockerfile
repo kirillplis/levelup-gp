@@ -6,4 +6,4 @@ RUN apt update -y && apt install -y npm
 COPY ./jspaint /jspaint
 WORKDIR jspaint
 RUN npm i
-RUN npm run dev
+ENTRYPOINT npm run dev
