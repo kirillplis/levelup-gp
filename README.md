@@ -5,7 +5,7 @@ Here is my LevelUp school DevOps Engineer course graduation project.
 This project main goal is to deploy web-version of old-school MS Paint.
 No instructions here, enjoy your nostalgia!
 
-# Installation process:
+## Installation process:
 1) Run VM instance with ubuntu 20.04 onboard, create firewall rule which opens ports: 80, 8080, 3000, 5601, 10050.
 2) Install ansible, add SSH-key to target machine, run "ansible-playbook vkr.yml". 
    It deploys:
