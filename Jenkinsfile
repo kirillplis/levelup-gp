@@ -12,6 +12,7 @@ pipeline {
         }
         stage('Deploy application') {
             steps{
+                sh "kubectl delete deploy vkr"
                 sh "kubectl apply -f vkr-cluster.yml"
             }
         }
