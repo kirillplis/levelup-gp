@@ -10,13 +10,6 @@ pipeline {
                 git 'https://github.com/Chelbsik/levelup-vkr.git'
             }
         }
-        stage('Building image') {
-            steps{
-                script {
-                    docker.build registry + ":latest"
-                }
-            }
-        }
         stage('Deploy application') {
             steps{
                 sh "kubectl apply -f vkr-cluster.yml"
