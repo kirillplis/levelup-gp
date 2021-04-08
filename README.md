@@ -32,10 +32,9 @@ No instructions here, enjoy your nostalgia!
 5) And that's it. Commit to repository starts a deploy of app to k8s cluster. Estimated deployment time is about 7 minutes.
 
 ## Links:
-
-   [Paint](http://35.228.58.197:8080)
-   [Jenkins](http://35.187.50.242:8080)
-   [Grafana](http://35.187.50.242:3000)
-   [Zabbix](http://35.187.50.242:80)
-   [Kibana (ELK)](http://35.187.50.242:5601)
+1)[Paint](http://35.228.58.197:8080)
+2)[Jenkins](http://35.187.50.242:8080)
+3)[Grafana](http://35.187.50.242:3000)
+4)[Zabbix](http://35.187.50.242:80)
+5)[Kibana (ELK)](http://35.187.50.242:5601)
 
