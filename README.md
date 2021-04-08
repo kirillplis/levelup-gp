@@ -1,3 +1,5 @@
+Here is my LevelUp school DevOps Engineer course graduation project.
+
 Деплой основных сервисов через роли ансибл с centos-01 на centos-02
 Не забыть описать процесс подъема машин и первичной настройки
 Добавить плагин заббикс в установку графаны
