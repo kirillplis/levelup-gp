@@ -1,5 +1,16 @@
 Here is my LevelUp school DevOps Engineer course graduation project.
 
+This project main goal is to deploy web-version of old-school MS Paint.
+No instructions here, enjoy your nostalgia!
+
+Installation process:
+Install ansible, add SSH-key to target machine, run "ansible-playbook vkr.yml". 
+It deploys:
+ - Jenkins as program;
+ - Zabbix and Grafana as docker containers;
+ - ELK stack as docker containers via docker-compose;
+ 
+
 Деплой основных сервисов через роли ансибл с centos-01 на centos-02
 Не забыть описать процесс подъема машин и первичной настройки
 Добавить плагин заббикс в установку графаны
