@@ -31,10 +31,3 @@ No instructions here, enjoy your nostalgia!
 4) Create Jenkins pipeline, set GitHub repository, GitHub hook trigger for GITScm polling, and webhook at GitHub repository.
 5) And that's it. Commit to repository starts a deploy of app to k8s cluster. Estimated deployment time is about 7 minutes.
 
-## Links:
-   - [Paint](http://35.228.58.197:8080)
-   - [Jenkins](http://35.187.50.242:8080)
-   - [Grafana](http://35.187.50.242:3000)
-   - [Zabbix](http://35.187.50.242:80)
-   - [Kibana (ELK)](http://35.187.50.242:5601)
-
